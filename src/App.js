@@ -1,23 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import { Scoreboard } from './scoreboard';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
+
+  const tableStyle = {
+    paddingLeft: "3rem",
+    paddingRight: "3rem",
+    fontFamily: "Arial",
+  };
+
+  const headerStyle = {
+    paddingTop: "1rem",
+    paddingBottom: "1rem"
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header style={headerStyle}>
+        <h4>
+          CS Scoreboard
+        </h4>
       </header>
+      <div style={tableStyle}>
+      <Scoreboard />
+      </div>
     </div>
   );
 }
